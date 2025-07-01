@@ -1,239 +1,509 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Parcours</title>
+        <meta name="description" content="Parcours professionnel et éducatif de MBAYE Moustapha - Ingénieur en Transition Energétique" />
+        <meta name="author" content="MBAYE Moustapha" />
+        <title>Parcours Professionnel | MBAYE Moustapha</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/formation.jpg" />
         <!-- Custom Google font-->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
         <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            .text-gradient {
+                background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .bg-gradient-primary-to-secondary {
+                background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            }
+            .timeline-card {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                border-left: 4px solid #2a5298;
+            }
+            .timeline-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+            .company-logo {
+                max-height: 60px;
+                max-width: 120px;
+                object-fit: contain;
+                margin-bottom: 10px;
+            }
+            .skill-badge {
+                background-color: #e9f0f9;
+                color: #2a5298;
+                font-weight: 500;
+                margin: 3px;
+            }
+        </style>
     </head>
     <body class="d-flex flex-column h-100 bg-light">
         <main class="flex-shrink-0">
             <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-                <div class="container px-5">
-                    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Accueil</span></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                           
-                            <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-                            <li class="nav-item"><a class="nav-link" href="projects.html">Projets</a></li>
-                          
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+           
+    <!-- HEADER MODERNE ET HARMONISÉ -->
+    <header class="bg-white border-bottom shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light container px-5 py-3" aria-label="Navigation principale">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    
+                    <span class="fw-bolder text-gradient fs-4">MBAYE Moustapha</span>
+                </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Afficher le menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav fw-bolder">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="resume.html">Formations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projets</a></li>
+    
+                    <li class="nav-item"><a class="nav-link" href="mailto:mmbaye2905@gmail.com">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+<!-- ANIMATION SVG THÉMATIQUE APRÈS LE HEADER -->
+        <section class="bg-light py-4" aria-label="Animation solaire">
+            <div class="solar-svg-container d-flex justify-content-center align-items-center">
+                <svg width="500" height="180" viewBox="0 0 500 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <!-- Ombre des panneaux -->
+                    <ellipse cx="340" cy="155" rx="110" ry="12" fill="#b0bec5" opacity="0.25"/>
+                    <!-- Soleil réaliste -->
+                    <g>
+                        <circle cx="90" cy="60" r="36" fill="url(#sunGradient)">
+                            <animate attributeName="r" values="36;40;36" dur="2s" repeatCount="indefinite"/>
+                        </circle>
+                        <g>
+                            <line x1="90" y1="18" x2="90" y2="0" stroke="#FFD600" stroke-width="5">
+                                <animate attributeName="y2" values="0;10;0" dur="2s" repeatCount="indefinite"/>
+                            </line>
+                            <line x1="90" y1="102" x2="90" y2="120" stroke="#FFD600" stroke-width="5">
+                                <animate attributeName="y2" values="120;110;120" dur="2s" repeatCount="indefinite"/>
+                            </line>
+                            <line x1="54" y1="60" x2="20" y2="60" stroke="#FFD600" stroke-width="5">
+                                <animate attributeName="x2" values="20;30;20" dur="2s" repeatCount="indefinite"/>
+                            </line>
+                            <line x1="126" y1="60" x2="160" y2="60" stroke="#FFD600" stroke-width="5">
+                                <animate attributeName="x2" values="160;150;160" dur="2s" repeatCount="indefinite"/>
+                            </line>
+                            <line x1="65" y1="35" x2="40" y2="10" stroke="#FFD600" stroke-width="3"/>
+                            <line x1="115" y1="35" x2="140" y2="10" stroke="#FFD600" stroke-width="3"/>
+                            <line x1="65" y1="85" x2="40" y2="110" stroke="#FFD600" stroke-width="3"/>
+                            <line x1="115" y1="85" x2="140" y2="110" stroke="#FFD600" stroke-width="3"/>
+                        </g>
+                        <defs>
+                            <radialGradient id="sunGradient" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5">
+                                <stop offset="0%" stop-color="#FFFDE7"/>
+                                <stop offset="80%" stop-color="#FFD600"/>
+                                <stop offset="100%" stop-color="#FFA000"/>
+                            </radialGradient>
+                        </defs>
+                    </g>
+                    <!-- Panneaux solaires réalistes -->
+                    <g>
+                        <!-- Panneau 1 (avant) -->
+                        <g>
+                            <rect x="260" y="110" width="110" height="35" rx="6" fill="#1976D2" stroke="#1565C0" stroke-width="3"/>
+                            <!-- Reflets -->
+                            <rect x="265" y="115" width="20" height="8" fill="#fff" opacity="0.13" rx="2"/>
+                            <rect x="320" y="120" width="30" height="6" fill="#fff" opacity="0.09" rx="2"/>
+                            <!-- Cellules -->
+                            <g>
+                                <rect x="270" y="120" width="15" height="7" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="288" y="120" width="15" height="7" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="306" y="120" width="15" height="7" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="324" y="120" width="15" height="7" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="342" y="120" width="15" height="7" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="270" y="132" width="15" height="7" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="288" y="132" width="15" height="7" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="306" y="132" width="15" height="7" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="324" y="132" width="15" height="7" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="342" y="132" width="15" height="7" fill="#90CAF9" opacity="0.8"/>
+                            </g>
+                            <!-- Pied -->
+                            <rect x="307" y="145" width="10" height="15" fill="#757575"/>
+                        </g>
+                        <!-- Panneau 2 (arrière, incliné) -->
+                        <g transform="skewY(-12)">
+                            <rect x="370" y="100" width="90" height="25" rx="5" fill="#1976D2" stroke="#1565C0" stroke-width="2"/>
+                            <g>
+                                <rect x="375" y="104" width="12" height="6" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="389" y="104" width="12" height="6" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="403" y="104" width="12" height="6" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="417" y="104" width="12" height="6" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="431" y="104" width="12" height="6" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="375" y="112" width="12" height="6" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="389" y="112" width="12" height="6" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="403" y="112" width="12" height="6" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="417" y="112" width="12" height="6" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="431" y="112" width="12" height="6" fill="#90CAF9" opacity="0.8"/>
+                            </g>
+                            <rect x="410" y="125" width="10" height="10" fill="#757575"/>
+                        </g>
+                    </g>
+                    <!-- Sol -->
+                    <rect x="0" y="160" width="500" height="20" fill="#A5D6A7"/>
+                </svg>
+            </div>
+        </section>
+
+    <main class="flex-shrink-0" id="main-content">
+       
             <!-- Page Content-->
             <div class="container px-5 my-5">
                 <div class="text-center mb-5">
-                    <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Resume</span></h1>
+                    <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Mon Parcours</span></h1>
+                    <p class="lead mt-3">Expériences professionnelles et formation académique</p>
                 </div>
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-11 col-xl-9 col-xxl-8">
                         <!-- Experience Section-->
                         <section>
                             <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h2 class="text-primary fw-bolder mb-0">Expériences</h2>
-                                
+                                <h2 class="text-primary fw-bolder mb-0">
+                                    <i class="bi bi-briefcase me-2"></i>Expériences Professionnelles
+                                </h2>
                             </div>
-                            <!-- Experience Card 1-->
-                            <div class="card shadow border-0 rounded-4 mb-5">
-                                <div class="card-body p-5">
-                                    <div class="row align-items-center gx-5">
-                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                            <div class="bg-light p-4 rounded-4">
-                                                <div class="text-primary fw-bolder mb-2">Septembre 2023 - Présent</div>
-                                                <div class="small fw-bolder">Restauration rapide</div>
-                                                <center><div class="small text-muted">Burger King</div>
-                                                    <div class="small text-muted">Paridis, Nantes</div>
-                                                </center>
-                                                
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8"><div>
-                                            <p>&bull; Gestion du temps et sens de l'efficacité </p>
-                                            <p>&bull; Capacité à travaillé sous pression</p>
-                                            <p>&bull; Gestion du stress et prise de décision rapide</p>
-                                            <p>&bull; Travail d'équipe</p>
-                                           <p>&bull;Adaptabilité</p> 
-                                         
-                                        </div></div>
-                                    </div>
-                                </div>
-                            </div>
-                             <!-- Experience Card 2-->
-                             <div class="card shadow border-0 rounded-4 mb-5">
-                                <div class="card-body p-5">
-                                    <div class="row align-items-center gx-5">
-                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                            <div class="bg-light p-4 rounded-4">
-                                                <div class="text-primary fw-bolder mb-2">1 mois : Juin 2023</div>
-                                                <div class="small fw-bolder">Stage Opérateur</div>
-                                                <center><div class="small text-muted">Arcadie Viandes</div>
-                                                    <div class="small text-muted">Anglet</div>
-                                                </center>
-                                                
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8"><div>
-                                            <p>&bull; Travail en équipe de production : préparation et emballage de produits alimentaires de haute qualité,</p>
-                                        <p>&bull; Respect des normes strictes de sécurité alimentaire dans un environnement exigeant,</p>
-                                        <p>&bull; Contribution à l'amélioration des processus de production,</p>
-                                        <p>&bull; Stage suivi de 2 mois de job d'été en 2023.</p> 
-                                         
-                                        </div></div>
-                                    </div>
-                                </div>
-                            </div>
-                         <!-- Experience Card 3-->
-                         <div class="card shadow border-0 rounded-4 mb-5">
-                            <div class="card-body p-5">
-                                <div class="row align-items-center gx-5">
-                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                        <div class="bg-light p-4 rounded-4">
-                                            <div class="text-primary fw-bolder mb-2">Avril-Juin 2022</div>
-                                            <div class="small fw-bolder">Stage de fin d'études (Licence)</div>
-                                            
-                                            <center><div class="small text-muted">Laboratoire CERTES</div>
-                                                <div class="small text-muted">Créteil</div>
-                                            </center>
-                                            
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-8"><div>
-                                        <a href="https://www.certes-upec.fr/" title="Laboratoire CERTES"><img src="assets/Certes.jpeg" alt="logo Certes"></a>
-                                        <p>&bull; Contribution à la mise en œuvre d'un émulateur éolien,</p>
-                                        <p>&bull; Montage d'un banc d'essai opérationnel.</p>
-                                     
-                                    </div></div>
-                                </div>
-                            </div>
-                        </div>
-                          <!-- Experience Card 4-->
-                          <div class="card shadow border-0 rounded-4 mb-5">
-                            <div class="card-body p-5">
-                                <div class="row align-items-center gx-5">
-                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                        <div class="bg-light p-4 rounded-4">
-                                            <div class="text-primary fw-bolder mb-2">2020-2022, 2 ans </div>
-                                            <div class="small fw-bolder">Stage Assistant éducation</div>
-                                            
-                                            <center><div class="small text-muted">Collège Louis Pasteur de Créteil </div>
-                                                <div class="small text-muted">Créteil</div>
-                                            </center>
-                                            
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-8"><div>
-                                        <a href="https://www.education.gouv.fr/bo/19/Hebdo41/MENH1929194C.htm" title="Ministère de l'éducation"><img src="assets/Pass.jpeg" alt="logo entreprise "></a>
-                                        <p>&bull; Observation dans le second degré,</p>
-                                        <p>&bull; Aide aux élèves dans le cadre du concept "devoirs faits,"</p>
-                                        <p>&bull; Participation à des cours et analyse de la méthodologie des professeurs.</p>
-                                     
-                                    </div></div>
-                                </div>
-                            </div>
-                        </div>
-                    
-                    
 
-        
-                      
+                            <!-- Experience Card 1 - Nouvelle expérience -->
+                            <div class="card shadow border-0 rounded-4 mb-5 timeline-card">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <img src="assets/RISOM_LOGO_RVB_BLEU.jpg" alt="RISÖM" class="company-logo">
+                                                <div class="text-primary fw-bolder mb-2">2024 - 2025 (1 an)</div>
+                                                <div class="small fw-bolder">Ingénieur d'études en contrat PRO</div>
+                                                <div class="small text-muted">RISÖM</div>
+                                                <div class="small text-muted">Nantes</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <ul>
+                                                <li>Étude et modélisation de systèmes photovoltaïques</li>
+                                                <li>Analyse technique des installations IRVE (Infrastructure de Recharge pour Véhicules Électriques)</li>
+                                                <li>Optimisation des performances énergétiques</li>
+                                                <li>Rédaction de rapports techniques et préconisations</li>
+                                            </ul>
+                                            <div class="mt-3">
+                                                <span class="badge skill-badge">PVsyst</span>
+                                                <span class="badge skill-badge">PowerBI</span>
+                                                <span class="badge skill-badge">Archelios</span>
+                                              
+                                                <span class="badge skill-badge">Modélisation</span>
+                                                <span class="badge skill-badge">Photovoltaïque</span>
+                                                <span class="badge skill-badge">IRVE</span>
+                                                <span class="badge skill-badge">Analyse de données</span>
+                                                <span class="badge skill-badge">Analyse technique</span>
+                                                <span class="badge skill-badge">Gestion de projet</span>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow border-0 rounded-4 mb-5 timeline-card">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <img src="assets/Wepo.png" alt="WePo" class="company-logo">
+                                                <div class="text-primary fw-bolder mb-2">Avril à juillet 2024 (4 mois)</div>
+                                                <div class="small fw-bolder">Ingénieur d'études débutant</div>
+                                                <div class="small text-muted">WePo</div>
+                                                <div class="small text-muted">Rezé</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <ul>
+                                                <li>Réalisation d’études de faisabilité de chaufferie de bois avec ou sans réseau de chaleur </li>
+
+                                                <li>Modélisation de systèmes énergétiques complexes</li>
+                                                <li>Analyse des besoins énergétiques des clients</li>
+                                                <li>Analyse des performances énergétiques des installations</li>    
+                                                <li>Rédaction de rapports techniques et préconisations</li>
+                                            
+
+                    
+                                            </ul>
+                                            <div class="mt-3">
+                                                <span class="badge skill-badge">Bois énergie</span>
+                                                <span class="badge skill-badge">Chaudière bois</span>
+                                                <span class="badge skill-badge">Modélisation</span>
+                                                <span class="badge skill-badge">Chaufferie</span>
+                                                <span class="badge skill-badge">Réseau de chaleur urbain</span>
+                                                <span class="badge skill-badge">Gestion de projet</span>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Experience Card 2 -->
+                            <div class="card shadow border-0 rounded-4 mb-5 timeline-card">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <img src="assets/bk.jpg" alt="Burger King" class="company-logo">
+                                                <div class="text-primary fw-bolder mb-2">2023 (7 mois)</div>
+                                                <div class="small fw-bolder">Équipier polyvalent</div>
+                                                <div class="small text-muted">Burger King</div>
+                                                <div class="small text-muted">Nantes</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <ul>
+                                                <li>Gestion du temps et sens de l'efficacité dans un environnement rapide</li>
+                                                <li>Capacité à travailler sous pression avec un volume important de clients</li>
+                                                <li>Gestion du stress et prise de décision rapide</li>
+                                                <li>Travail d'équipe et coordination avec les collègues</li>
+                                                <li>Adaptabilité aux différents postes de travail</li>
+                                            </ul>
+                                            <div class="mt-3">
+                                                <span class="badge skill-badge">Service client</span>
+                                                <span class="badge skill-badge">Travail d'équipe</span>
+                                                <span class="badge skill-badge">Gestion du stress</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Experience Card 3 -->
+                            <div class="card shadow border-0 rounded-4 mb-5 timeline-card">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <img src="assets/arcadie.jpg" alt="Arcadie Viandes" class="company-logo">
+                                                <div class="text-primary fw-bolder mb-2">Juin 2023 (1 mois + 2 mois job d'été)</div>
+                                                <div class="small fw-bolder">Opérateur de production</div>
+                                                <div class="small text-muted">Arcadie Viandes</div>
+                                                <div class="small text-muted">Anglet</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <ul>
+                                                <li>Travail en équipe de production : préparation et emballage de produits alimentaires de haute qualité</li>
+                                                <li>Respect des normes strictes de sécurité alimentaire dans un environnement exigeant</li>
+                                                <li>Contribution à l'amélioration des processus de production</li>
+                                                <li>Adaptation rapide aux différents postes de travail</li>
+                                            </ul>
+                                            <div class="mt-3">
+                                                <span class="badge skill-badge">Sécurité alimentaire</span>
+                                                <span class="badge skill-badge">Process industriel</span>
+                                                <span class="badge skill-badge">Travail en équipe</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Experience Card 4 -->
+                            <div class="card shadow border-0 rounded-4 mb-5 timeline-card">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <img src="assets/Certes.jpeg" alt="Laboratoire CERTES" class="company-logo">
+                                                <div class="text-primary fw-bolder mb-2">Avril-Juin 2022</div>
+                                                <div class="small fw-bolder">Stagiaire en énergétique</div>
+                                                <div class="small text-muted">Laboratoire CERTES</div>
+                                                <div class="small text-muted">Créteil</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <ul>
+                                                <li>Contribution à la mise en œuvre d'un émulateur éolien</li>
+                                                <li>Montage d'un banc d'essai opérationnel</li>
+                                                <li>Analyse des données de performance</li>
+                                                <li>Rédaction de rapports techniques</li>
+                                            </ul>
+                                            <div class="mt-3">
+                                                <span class="badge skill-badge">Émulateur éolien</span>
+                                                <span class="badge skill-badge">Banc d'essai</span>
+
+                                                <span class="badge skill-badge">Énergie éolienne</span>
+                                                <span class="badge skill-badge">Analyse de données</span>
+                                                <span class="badge skill-badge">Rédaction technique</span>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Experience Card 5 -->
+                            <div class="card shadow border-0 rounded-4 mb-5 timeline-card">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <img src="assets/Pass.jpeg" alt="Collège Pasteur" class="company-logo">
+                                                <div class="text-primary fw-bolder mb-2">2020-2022</div>
+                                                <div class="small fw-bolder">Assistant d'éducation</div>
+                                                <div class="small text-muted">Collège Louis Pasteur</div>
+                                                <div class="small text-muted">Créteil</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <ul>
+                                                <li>Observation dans le second degré et analyse des méthodes pédagogiques</li>
+                                                <li>Aide aux élèves dans le cadre du concept "devoirs faits"</li>
+                                                <li>Participation à des cours et analyse de la méthodologie des professeurs</li>
+                                                <li>Encadrement des élèves pendant les temps périscolaires</li>
+                                            </ul>
+                                            <div class="mt-3">
+                                                <span class="badge skill-badge">Pédagogie</span>
+                                                <span class="badge skill-badge">Encadrement</span>
+                                                <span class="badge skill-badge">Communication</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
                         <!-- Education Section-->
                         <section>
-                            <h2 class="text-secondary fw-bolder mb-4">Education</h2>
-                            <!-- Education Card 1-->
-                            <div class="card shadow border-0 rounded-4 mb-5">
+                            <h2 class="text-secondary fw-bolder mb-4">
+                                <i class="bi bi-book me-2"></i>Formation Académique
+                            </h2>
+
+                            <!-- Education Card 1 -->
+                            <div class="card shadow border-0 rounded-4 mb-5 timeline-card">
                                 <div class="card-body p-5">
                                     <div class="row align-items-center gx-5">
                                         <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                             <div class="bg-light p-4 rounded-4">
+                                                <img src="assets/logo-imta.png" alt="IMT Atlantique" class="company-logo">
                                                 <div class="text-secondary fw-bolder mb-2">2022-2025</div>
-                                                <div class="mb-2">
-                                                    <center>
-                                                    <a href="https://www.imt-atlantique.fr/fr" title="IMT Atlantique"><img src="assets/logo-imta.png" alt="logo IMT Atlantique"> </a>
-                                                    <div class="small fw-bolder">IMT Atlantique</div>
-                                                    
-                                                    <div class="small text-muted">Brest-Nantes</div>
-                                                </div>
+                                                <div class="small fw-bolder">IMT Atlantique</div>
+                                                <div class="small text-muted">Brest-Nantes</div>
                                                 <div class="fst-italic">
-                                                    <div class="small fw-bolder"><strong>Formation Ingénieur Généraliste</strong></div>
-                                                </center>
-
+                                                    <div class="small text-muted">Diplôme d'Ingénieur Généraliste</div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-8"><div> <div class="col-lg-8"><div>
-                                        <center><p>&#x2014; 1ière Année: Formation généraliste</p>
-                                            <p>&#x2014; 2ième Année(en cours): Transition énergétique et environnementale</p>
-                                            <p>&bull;Gestion de Projets d'Envergure</p>
-                                            <p>&bull;Gestion des Parties Prenantes</p>    
-                                         <p>&bull;Respect des normes et Règlementations Environnementales</p>
-                                         <p>&bull;Analyse des Risques Environnementaux</p> 
-                                        </center> 
-                                        </div></div></div></div>
+                                        <div class="col-lg-8">
+                                            <h5 class="fw-bolder">Spécialisation en Transition Énergétique et Environnementale</h5>
+                                            <ul>
+                                                <li><strong>1ère Année</strong>: Formation généraliste (tronc commun)</li>
+                                                <li><strong>2ème Année</strong>: Spécialisation Transition Énergétique et Environnementale
+                                                    <ul>
+                                                        <li>Gestion de Projets d'Envergure</li>
+                                                        <li>Gestion des Parties Prenantes</li>
+                                                        <li>Analyse des Risques Environnementaux</li>
+                                                        <li>Respect des normes et Règlementations Environnementales</li>
+                                                    </ul>
+                                                </li>
+                                                <li><strong>3ème Année</strong>: Approfondissement en modélisation des systèmes énergétiques</li>
+                                            </ul>
+                                            <div class="mt-3">
+                                                <span class="badge skill-badge">Énergies renouvelables</span>
+                                                <span class="badge skill-badge">Transition énergétique et environnementale</span>
+                                                <span class="badge skill-badge">Gestion de projet</span>
+                                                <span class="badge skill-badge">Analyse des risques</span>
+                                                <span class="badge skill-badge">Règlementation environnementale</span>
+                                                <span class="badge skill-badge">Modélisation des systèmes énergétiques</span>
+                                                <span class="badge skill-badge">Gestion des parties prenantes</span>
+                                                
+                                               
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Education Card 2-->
-                            <div class="card shadow border-0 rounded-4 mb-5">
+
+                            <!-- Education Card 2 -->
+                            <div class="card shadow border-0 rounded-4 mb-5 timeline-card">
                                 <div class="card-body p-5">
                                     <div class="row align-items-center gx-5">
                                         <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                             <div class="bg-light p-4 rounded-4">
+                                                <img src="assets/Upec.jpg" alt="UPEC" class="company-logo">
                                                 <div class="text-secondary fw-bolder mb-2">2019 - 2022</div>
-                                                <div class="mb-2">
-                                                    <a href="https://www.u-pec.fr/" title="Université Paris Est-Créteil"><img src="assets/Upec.jpg" alt="logo Upec"> </a>
-                                                    <div class="small fw-bolder">Uiversité de Paris-Est Créteil (UPEC)</div>
-                                                    <div class="small text-muted">Ile de France, Créteil</div>
-                                                </div>
+                                                <div class="small fw-bolder">Université Paris-Est Créteil</div>
+                                                <div class="small text-muted">Créteil</div>
                                                 <div class="fst-italic">
                                                     <div class="small text-muted">Double Licence Mathématiques-Physique</div>
                                                     <div class="small text-muted">Mention BIEN</div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-8"><div>Compétences scientifiques solides </div></div>
+                                        <div class="col-lg-8">
+                                            <h5 class="fw-bolder">Formation pluridisciplinaire scientifique</h5>
+                                            <ul>
+                                                <li>Acquisition de solides compétences en mathématiques appliquées</li>
+                                                <li>Maîtrise des concepts fondamentaux de la physique</li>
+                                                <li>Développement de capacités d'analyse et de modélisation</li>
+                                                <li>Initiation à la programmation scientifique (Python, MATLAB)</li>
+                                            </ul>
+                                            <div class="mt-3">
+                                                <span class="badge skill-badge">Mathématiques appliquées</span>
+                                                <span class="badge skill-badge">Physique fondamentale</span>
+                                                <span class="badge skill-badge">Programmation scientifique</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Education Card 3-->
-                            <div class="card shadow border-0 rounded-4 mb-5">
+
+                            <!-- Education Card 3 -->
+                            <div class="card shadow border-0 rounded-4 mb-5 timeline-card">
                                 <div class="card-body p-5">
                                     <div class="row align-items-center gx-5">
                                         <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                             <div class="bg-light p-4 rounded-4">
+                                                <img src="assets/Lsll.jpeg" alt="Lycée Seydina Limamoulaye" class="company-logo">
                                                 <div class="text-secondary fw-bolder mb-2">2016 - 2019</div>
-                                                <div class="mb-2">
-                                                    <a href="https://academie-plus.com/Etablissement/lsll-176" title="Lycée Seydina Limamoulaye"><img src="assets/Lsll.jpeg" alt="logo Lsll"></a>
-
-                                                    <div class="small fw-bolder">Lycée Seydina Limamoulaye</div>
-                                                    <div class="small text-muted">Dakar, Guédiawaye</div>
-                                                </div>
+                                                <div class="small fw-bolder">Lycée Seydina Limamoulaye</div>
+                                                <div class="small text-muted">Dakar, Sénégal</div>
                                                 <div class="fst-italic">
-                                                    <div class="small text-muted">Baccalauréat spécilité Mathématiques et Physique-Chimie</div>
+                                                    <div class="small text-muted">Baccalauréat Scientifique</div>
                                                     <div class="small text-muted">Mention BIEN</div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-8"><div>Compétences scientifiques solides </div></div>
+                                        <div class="col-lg-8">
+                                            <h5 class="fw-bolder">Spécialité Mathématiques et Physique-Chimie</h5>
+                                            <ul>
+                                                <li>Acquisition de bases solides en sciences fondamentales</li>
+                                                <li>Développement de capacités d'analyse et de raisonnement</li>
+                                                <li>Initiation à la démarche scientifique</li>
+                                                <li>Participation à des compétitions mathématiques</li>
+                                            </ul>
+                                            <div class="mt-3">
+                                                <span class="badge skill-badge">Mathématiques</span>
+                                                <span class="badge skill-badge">Physique</span>
+                                                <span class="badge skill-badge">Chimie</span>       
+                                                <span class="badge skill-badge">Raisonnement scientifique</span>
+                                                <span class="badge skill-badge">Démarche scientifique</span>    
+                                           
+                                            
+
+                                        
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </section>
-                        <!-- Divider-->
-                        <div class="pb-5"></div>
+
                         <!-- Skills Section-->
                         <section>
                             <!-- Skillset Card-->
@@ -243,34 +513,34 @@
                                     <div class="mb-5">
                                         <div class="d-flex align-items-center mb-4">
                                             <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-tools"></i></div>
-                                            <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Professional Skills</span></h3>
+                                            <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Compétences Professionnelles</span></h3>
                                         </div>
                                         <div class="row row-cols-1 row-cols-md-3 mb-4">
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Sens de l'organisation</div></div>
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Capacité d'adaptation</div></div>
-                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Web Development</div></div>
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Gestion de projet</div></div>
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Analyse énergétique</div></div>
+                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Modélisation scientifique</div></div>
                                         </div>
                                         <div class="row row-cols-1 row-cols-md-3">
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Rigueur</div></div>
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Travail en Equipe</div></div>
-                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Autonomie</div></div>
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Travail en équipe</div></div>
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Adaptabilité</div></div>
+                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Résolution de problèmes</div></div>
                                         </div>
                                     </div>
                                     <!-- Languages list-->
                                     <div class="mb-0">
                                         <div class="d-flex align-items-center mb-4">
                                             <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-code-slash"></i></div>
-                                            <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Languages</span></h3>
+                                            <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Compétences Techniques</span></h3>
                                         </div>
                                         <div class="row row-cols-1 row-cols-md-3 mb-4">
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">HTML</div></div>
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">CSS</div></div>
-                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">JavaScript</div></div>
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Python</div></div>
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">MATLAB</div></div>
+                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">PVsyst</div></div>
                                         </div>
                                         <div class="row row-cols-1 row-cols-md-3">
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Python</div></div>
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">HTML/CSS</div></div>
                                             <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">AngularJS</div></div>
-                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Node.js (en cours)</div></div>
+                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">PowerBI</div></div>
                                         </div>
                                     </div>
                                 </div>
@@ -284,13 +554,11 @@
         <footer class="bg-white py-4 mt-auto">
             <div class="container px-5">
                 <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto"><div class="small m-0">Copyright &copy; MBAYE Moustapha</div></div>
+                    <div class="col-auto"><div class="small m-0">Copyright &copy; MBAYE Moustapha <span id="current-year"></span></div></div>
                     <div class="col-auto">
-                    </div>
-                    <div class="col-auto">
-                        Tel : 06 05 53 64 26 -
-                        <a class="small" href="mailto:moustapha.mbaye@imt-atlantique.net">Contact</a>
-                    </div>
+                        <a class="small" href="tel:+33605536426"><i class="bi bi-phone me-1"></i>06 05 53 64 26</a>
+                        <span class="mx-2">|</span>
+                        <a class="small" href="mailto:moustapha.mbaye@imt-atlantique.net"><i class="bi bi-envelope me-1"></i>Contact</a>
                     </div>
                 </div>
             </div>
@@ -299,5 +567,9 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script>
+            // Ajoute l'année courante dans le footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        </script>
     </body>
 </html>

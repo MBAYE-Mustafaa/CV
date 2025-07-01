@@ -1,156 +1,372 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Mes Projets</title>
-    <!-- Favicon-->
+    <meta name="description" content="Portfolio de MBAYE Moustapha - Ingénieur en Transition Energétique">
+    <meta name="author" content="MBAYE Moustapha">
+    <title>Mes Projets | MBAYE Moustapha</title>
     <link rel="icon" type="image/x-icon" href="assets/Forma.jpg">
-    <!-- Custom Google font-->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
-    <!-- Bootstrap icons-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
-    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Core theme CSS -->
     <link href="css/styles.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f6f8fa;
+        }
+        .navbar-brand img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid #1976D2;
+            margin-right: 10px;
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-gradient-primary-to-secondary {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        }
+        .project-card {
+            transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+            border-radius: 1.25rem;
+            border: none;
+            background: #fff;
+            box-shadow: 0 4px 24px rgba(30,48,243,0.07);
+            overflow: hidden;
+        }
+        .project-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 12px 32px rgba(30,48,243,0.13);
+        }
+        .project-icon {
+            font-size: 2rem;
+            margin-right: 14px;
+            color: #1976D2;
+        }
+        .project-card img {
+            border-radius: 0 1.25rem 1.25rem 0;
+            box-shadow: 0 2px 12px rgba(30,48,243,0.07);
+        }
+        .project-card .card-body {
+            background: linear-gradient(90deg, #f6f8fa 60%, #e3eafc 100%);
+        }
+        .project-card ul {
+            padding-left: 1.2rem;
+        }
+        .project-card li {
+            margin-bottom: 0.3em;
+        }
+        .section-title {
+            letter-spacing: 1px;
+        }
+        /* Animation d'apparition */
+        [data-aos] {
+            opacity: 0;
+            transition-property: opacity, transform;
+        }
+        [data-aos].aos-animate {
+            opacity: 1;
+        }
+        /* Responsive SVG */
+        .solar-svg-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        @media (max-width: 600px) {
+            .solar-svg-container svg {
+                width: 100% !important;
+                height: auto !important;
+            }
+        }
+    </style>
 </head>
 <body class="d-flex flex-column h-100 bg-light">
     <main class="flex-shrink-0">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-            <div class="container px-5">
-                <a class="navbar-brand" href="index.html">
-                    <span class="fw-bolder text-primary">Accueil</span>
+        <!-- HEADER MODERNE ET HARMONISÉ -->
+        <header class="bg-white border-bottom shadow-sm">
+            <nav class="navbar navbar-expand-lg navbar-light container px-5 py-3" aria-label="Navigation principale">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    
+                    <span class="fw-bolder text-gradient fs-4">MBAYE Moustapha</span>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Afficher le menu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                
-                        <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-                        <li class="nav-item"><a class="nav-link" href="projects.html">Projets</a></li>
-                        
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav fw-bolder">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="resume.html">Formations</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="projects.html">Projets</a></li>
+                        <li class="nav-item"><a class="nav-link" href="mailto:mmbaye2905@gmail.com">Contact</a></li>
                     </ul>
                 </div>
+            </nav>
+        </header>
+
+        <!-- ANIMATION SVG THÉMATIQUE APRÈS LE HEADER -->
+        <section class="bg-light py-4" aria-label="Animation solaire">
+            <div class="solar-svg-container d-flex justify-content-center align-items-center">
+                <svg width="500" height="180" viewBox="0 0 500 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <!-- Ombre des panneaux -->
+                    <ellipse cx="340" cy="155" rx="110" ry="12" fill="#b0bec5" opacity="0.25"/>
+                    <!-- Soleil réaliste -->
+                    <g>
+                        <circle cx="90" cy="60" r="36" fill="url(#sunGradient)">
+                            <animate attributeName="r" values="36;40;36" dur="2s" repeatCount="indefinite"/>
+                        </circle>
+                        <g>
+                            <line x1="90" y1="18" x2="90" y2="0" stroke="#FFD600" stroke-width="5">
+                                <animate attributeName="y2" values="0;10;0" dur="2s" repeatCount="indefinite"/>
+                            </line>
+                            <line x1="90" y1="102" x2="90" y2="120" stroke="#FFD600" stroke-width="5">
+                                <animate attributeName="y2" values="120;110;120" dur="2s" repeatCount="indefinite"/>
+                            </line>
+                            <line x1="54" y1="60" x2="20" y2="60" stroke="#FFD600" stroke-width="5">
+                                <animate attributeName="x2" values="20;30;20" dur="2s" repeatCount="indefinite"/>
+                            </line>
+                            <line x1="126" y1="60" x2="160" y2="60" stroke="#FFD600" stroke-width="5">
+                                <animate attributeName="x2" values="160;150;160" dur="2s" repeatCount="indefinite"/>
+                            </line>
+                            <line x1="65" y1="35" x2="40" y2="10" stroke="#FFD600" stroke-width="3"/>
+                            <line x1="115" y1="35" x2="140" y2="10" stroke="#FFD600" stroke-width="3"/>
+                            <line x1="65" y1="85" x2="40" y2="110" stroke="#FFD600" stroke-width="3"/>
+                            <line x1="115" y1="85" x2="140" y2="110" stroke="#FFD600" stroke-width="3"/>
+                        </g>
+                        <defs>
+                            <radialGradient id="sunGradient" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5">
+                                <stop offset="0%" stop-color="#FFFDE7"/>
+                                <stop offset="80%" stop-color="#FFD600"/>
+                                <stop offset="100%" stop-color="#FFA000"/>
+                            </radialGradient>
+                        </defs>
+                    </g>
+                    <!-- Panneaux solaires réalistes -->
+                    <g>
+                        <!-- Panneau 1 (avant) -->
+                        <g>
+                            <rect x="260" y="110" width="110" height="35" rx="6" fill="#1976D2" stroke="#1565C0" stroke-width="3"/>
+                            <!-- Reflets -->
+                            <rect x="265" y="115" width="20" height="8" fill="#fff" opacity="0.13" rx="2"/>
+                            <rect x="320" y="120" width="30" height="6" fill="#fff" opacity="0.09" rx="2"/>
+                            <!-- Cellules -->
+                            <g>
+                                <rect x="270" y="120" width="15" height="7" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="288" y="120" width="15" height="7" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="306" y="120" width="15" height="7" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="324" y="120" width="15" height="7" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="342" y="120" width="15" height="7" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="270" y="132" width="15" height="7" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="288" y="132" width="15" height="7" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="306" y="132" width="15" height="7" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="324" y="132" width="15" height="7" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="342" y="132" width="15" height="7" fill="#90CAF9" opacity="0.8"/>
+                            </g>
+                            <!-- Pied -->
+                            <rect x="307" y="145" width="10" height="15" fill="#757575"/>
+                        </g>
+                        <!-- Panneau 2 (arrière, incliné) -->
+                        <g transform="skewY(-12)">
+                            <rect x="370" y="100" width="90" height="25" rx="5" fill="#1976D2" stroke="#1565C0" stroke-width="2"/>
+                            <g>
+                                <rect x="375" y="104" width="12" height="6" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="389" y="104" width="12" height="6" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="403" y="104" width="12" height="6" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="417" y="104" width="12" height="6" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="431" y="104" width="12" height="6" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="375" y="112" width="12" height="6" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="389" y="112" width="12" height="6" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="403" y="112" width="12" height="6" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="417" y="112" width="12" height="6" fill="#90CAF9" opacity="0.8"/>
+                                <rect x="431" y="112" width="12" height="6" fill="#90CAF9" opacity="0.8"/>
+                            </g>
+                            <rect x="410" y="125" width="10" height="10" fill="#757575"/>
+                        </g>
+                    </g>
+                    <!-- Sol -->
+                    <rect x="0" y="160" width="500" height="20" fill="#A5D6A7"/>
+                </svg>
             </div>
-        </nav>
+        </section>
+
         <!-- Projects Section-->
         <section class="py-5">
             <div class="container px-5 mb-5">
                 <div class="text-center mb-5">
-                    <h1 class="display-5 fw-bolder mb-0">
-                        <span class="text-gradient d-inline">Projects</span>
+                    <h1 class="display-5 fw-bolder mb-0 section-title">
+                        <span class="text-gradient d-inline">Mes Projets</span>
                     </h1>
+                    <p class="lead mt-3">Une sélection de mes réalisations professionnelles, académiques et personnelles</p>
                 </div>
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-11 col-xl-9 col-xxl-8">
-                        <!-- Project Card 1-->
-                        <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                        <!-- Project Card 1 -->
+                        <div class="card project-card mb-5 animate__animated animate__fadeInUp" data-aos="fade-up">
                             <div class="card-body p-0">
-                                <div class="d-flex align-items-center">
-                                    <div class="p-5">
-                                        <center><h5 class="fw-bolder">Engagement Communautaire : Projet CLEAN’SCHOOL</h5></center>
-                                        <p>&#x2014; Mise en place d'un club "Clean’School" dans chaque école de ma ville</p>
-                                        <p>&#x2014; Création d'un environnement scolaire plus attrayant, amélioration de la qualité de vie scolaire, et développement du leadership</p>
-                                        <p>&#x2014; Installation de poubelles dans toutes les écoles de la ville en collaboration avec les autorités de la ville.</p>
+                                <div class="d-flex align-items-center flex-column flex-lg-row">
+                                    <div class="p-5 flex-fill">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <i class="bi bi-sun project-icon"></i>
+                                            <h5 class="fw-bolder mb-0">Optimisation de systèmes photovoltaïques</h5>
+                                        </div>
+                                        <p class="mb-1"><i class="bi bi-calendar me-2"></i>Ingénieur d'études en contrat PRO chez RISÔM - 1 an</p>
+                                        <p class="mb-1"><i class="bi bi-gear me-2"></i>Technologies : PVsyst, Python, MATLAB</p>
+                                        <ul class="mt-3">
+                                            <li>Développement de modèles technico-économique pour une étude en solaire photovoltaïque</li>
+                                            <li>Analyse des données de production et modélisation des performances</li>
+                                            <li>Optimisation des configurations de panneaux solaires</li>
+                                            <li>Gestion de projet et suivi des délais</li>
+                                            <li>Utilisation de logiciels de simulation et d'analyse de données</li>
+                                            <li>Conception de systèmes photovoltaïques adaptés aux besoins clients</li>
+                                            <li>Réalisation d'études de faisabilité et d'impact environnemental</li>
+                                            <li>Veille technologique sur les innovations en solaire</li>
+                                        </ul>
                                     </div>
-                                    <img class="img-fluid" src="assets/Clean.png" alt="Image" height="168" width="150" />
+                                    <img class="img-fluid d-none d-lg-block" src="assets/solar.jpg" alt="Système photovoltaïque" style="width: 250px; height: 100%; object-fit: cover;">
                                 </div>
                             </div>
                         </div>
-                        <!-- Project Card 2-->
-                        <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                        <!-- Project Card 2 -->
+                        <div class="card project-card mb-5 animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="100">
                             <div class="card-body p-0">
-                                <div class="d-flex align-items-center">
-                                    <div class="p-5">
-                                        <center><h5 class="fw-bolder">Projet DDRS (Plantation d'arbres dans le campus de l’IMT Brest en 1ière année)</h5></center>
-                                        <p>&#x2014; Recherches sur les arbres adaptés par rapport à l'écosystème du campus,</p>
-                                        <p>&#x2014; Création et réalisation d'un sondage auprès du personnel de l'école et des élèves pour leur préférence (en lien avec les arbres finalement retenus),</p>
-                                        <p>&#x2014; Prise d'une décision finale en collaboration avec l'administration,</p>
-                                        <p>&#x2014; Participer à l'amélioration de la qualité de vie des étudiants et du personnel.</p>
+                                <div class="d-flex align-items-center flex-column flex-lg-row">
+                                    <div class="p-5 flex-fill">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <i class="bi bi-car-front project-icon"></i>
+                                            <h5 class="fw-bolder mb-0">Ingénieur chargé d'études débutant chez WePo</h5>
+                                        </div>
+                                        <p class="mb-1"><i class="bi bi-calendar me-2"></i>Avril à juillet 2024</p>
+                                        <p class="mb-1"><i class="bi bi-gear me-2"></i>Outils : Word, PowerPoint, Excel, PowerBI</p>
+                                        <ul class="mt-3">
+                                            <li>Étude technique de 2 réseaux de chaleur urbain (Quimper et Chateauneuf-sur-Sarthe)</li>
+                                            <li>Analyse des besoins énergétiques et dimensionnement des installations</li>
+                                            <li>Évaluation des performances énergétiques et environnementales</li>
+                                            <li>Rédaction de rapports techniques et présentation des résultats</li>
+                                            <li>Participation à la planification et au suivi des projets</li>
+                                        </ul>
                                     </div>
+                                    <img class="img-fluid d-none d-lg-block" src="assets/charging.jpeg" alt="Borne de recharge" style="width: 250px; height: 100%; object-fit: cover;">
                                 </div>
                             </div>
                         </div>
-                        <!-- Project Card 3-->
-                        <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                        <!-- Project Card 3 -->
+                        <div class="card project-card mb-5 animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="200">
                             <div class="card-body p-0">
-                                <div class="d-flex align-items-center">
-                                    <div class="p-5">
-                                        <center><h5 class="fw-bolder">Stage au laboratoire CERTES de Créteil (2 mois : Avril 2022 au Juin 2022)</h5></center>
-                                        <p>&#x2014; Contribution à la mise en œuvre d'un émulateur éolien,</p>
-                                        <p>&#x2014; Montage d'un banc d'essai opérationnel.</p>
+                                <div class="d-flex align-items-center flex-column flex-lg-row">
+                                    <div class="p-5 flex-fill">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <i class="bi bi-tree project-icon"></i>
+                                            <h5 class="fw-bolder mb-0">Engagement Communautaire : Projet CLEAN'SCHOOL</h5>
+                                        </div>
+                                        <p class="mb-1"><i class="bi bi-calendar me-2"></i>2023</p>
+                                        <ul class="mt-3">
+                                            <li>Mise en place d'un club "Clean'School" dans chaque école de ma ville</li>
+                                            <li>Création d'un environnement scolaire plus attrayant</li>
+                                            <li>Installation de poubelles en collaboration avec les autorités locales</li>
+                                            <li>Développement de compétences en leadership et gestion de projet</li>
+                                        </ul>
                                     </div>
+                                    <img class="img-fluid d-none d-lg-block" src="assets/Clean.png" alt="Projet Clean School" style="width: 250px; height: 100%; object-fit: cover;">
                                 </div>
                             </div>
                         </div>
-                        <!-- Project Card 4-->
-                        <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                        <!-- Project Card 4 -->
+                        <div class="card project-card mb-5 animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="300">
                             <div class="card-body p-0">
-                                <div class "d-flex align-items-center">
-                                    <div class="p-5">
-                                        <center><h5 class="fw-bolder">Stage Assistant éducation au collège Pasteur de Créteil (2020-2022, 2 ans)</h5></center>
-                                        <p>&#x2014; Observation dans le second degré,</p>
-                                        <p>&#x2014; Aide aux élèves dans le cadre du concept "devoirs faits,"</p>
-                                        <p>&#x2014; Participation à des cours et analyse de la méthodologie des professeurs.</p>
+                                <div class="d-flex align-items-center flex-column flex-lg-row">
+                                    <div class="p-5 flex-fill">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <i class="bi bi-people project-icon"></i>
+                                            <h5 class="fw-bolder mb-0">Responsable logistique - Cartel des Mines 2023</h5>
+                                        </div>
+                                        <p class="mb-1"><i class="bi bi-calendar me-2"></i>2023</p>
+                                        <ul class="mt-3">
+                                            <li>Gestion complète de la logistique pour 150 participants</li>
+                                            <li>Négociation avec les prestataires de transport et d'hébergement</li>
+                                            <li>Optimisation des coûts et des plans de transport</li>
+                                            <li>Coordination avec l'administration de l'école et les autres bureaux de l'école</li>
+                                        </ul>
                                     </div>
+                                    <img class="img-fluid d-none d-lg-block" src="assets/logistics.jpeg" alt="Logistique" style="width: 250px; height: 100%; object-fit: cover;">
                                 </div>
                             </div>
                         </div>
-                        <!-- Project Card 5-->
-                        <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                        <!-- Project Card 5 -->
+                        <div class="card project-card mb-5 animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="400">
                             <div class="card-body p-0">
-                                <div class="d-flex align-items-center">
-                                    <div class="p-5">
-                                        <center><h5 class="fw-bolder">Stage Chez Arcadies Viandes (1 mois : Juin 2023)</h5></center>
-                                        <p>&#x2014; Travail en équipe de production : préparation et emballage de produits alimentaires de haute qualité,</p>
-                                        <p>&#x2014; Respect des normes strictes de sécurité alimentaire dans un environnement exigeant,</p>
-                                        <p>&#x2014; Contribution à l'amélioration des processus de production,</p>
-                                        <p>&#x2014; Stage suivi de 2 mois de job d'été en 2023.</p>
+                                <div class="d-flex align-items-center flex-column flex-lg-row">
+                                    <div class="p-5 flex-fill">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <i class="bi bi-code project-icon"></i>
+                                            <h5 class="fw-bolder mb-0">Développement d'interface - LUCCA</h5>
+                                        </div>
+                                        <p class="mb-1"><i class="bi bi-calendar me-2"></i>Septembre-Décembre 2023</p>
+                                        <p class="mb-1"><i class="bi bi-gear me-2"></i>Langages utilisés : AngularJS, HTML, CSS, NodeJS</p>
+                                        <ul class="mt-3">
+                                            <li>Développement d'un écran d'accueil pour la communication interne</li>
+                                            <li>Intégration avec les systèmes existants de l'entreprise</li>
+                                            <li>Tests utilisateurs et itérations sur l'interface</li>
+                                        </ul>
                                     </div>
+                                    <img class="img-fluid d-none d-lg-block" src="assets/Maquette.png" alt="Interface utilisateur" style="width: 250px; height: 100%; object-fit: cover;">
                                 </div>
                             </div>
                         </div>
-                        <!-- Project Card 6-->
-                        <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                        <!-- Project Card 6 -->
+                        <div class="card project-card mb-5 animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="500">
                             <div class="card-body p-0">
-                                <div class="d-flex align-items-center">
-                                    <div class="p-5">
-                                        <center><h5 class="fw-bolder">Codevsi (Création d’un événement de médiation autour des drones de l'IMT Atlantique)</h5></center>
-                                        <p>&#x2014; Faire preuve de créativité en imaginant un événement ludique et instructif</p>
-                                        <p>&#x2014; Résultat: Réussite du test de l'événement</p>
+                                <div class="d-flex align-items-center flex-column flex-lg-row">
+                                    <div class="p-5 flex-fill">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <i class="bi bi-controller project-icon"></i>
+                                            <h5 class="fw-bolder mb-0">Codevsi - Médiation scientifique avec drones</h5>
+                                        </div>
+                                        <p class="mb-1"><i class="bi bi-calendar me-2"></i>2023</p>
+                                        <ul class="mt-3">
+                                            <li>Conception d'un événement ludique autour des drones</li>
+                                            <li>Démonstrations techniques et ateliers pratiques</li>
+                                            <li>Médiation scientifique pour public non initié</li>
+                                            <li>Test réussi avec participation de 50+ collégiens</li>
+                                        </ul>
                                     </div>
+                                    <img class="img-fluid d-none d-lg-block" src="assets/drone.jpg" alt="Projet drones" style="width: 250px; height: 100%; object-fit: cover;">
                                 </div>
                             </div>
                         </div>
-                        <!-- Project Card 7-->
-                        <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                        <!-- Project Card 7 -->
+                        <div class="card project-card mb-5 animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="600">
                             <div class="card-body p-0">
-                                <div class="d-flex align-items-center">
-                                    <div class="p-5">
-                                        <center><h5 class="fw-bolder">Membre du Bureau des Sports de l’IMT Brest (Pôle Compet)</h5></center>
-                                        <p>&#x2014; Organisation d'événements sportifs au sein de l'école,</p>
-                                        <p>&#x2014; Création d'un nouveau tournoi de futsal avec le concept "So'ker Cup" : équipes formées en fonction des pays d'origine ou de la ville,</p>
-                                        <p>&#x2014; Satisfaction des élèves concernant les activités du BDS</p>
+                                <div class="d-flex align-items-center flex-column flex-lg-row">
+                                    <div class="p-5 flex-fill">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <i class="bi bi-lightning-charge project-icon"></i>
+                                            <h5 class="fw-bolder mb-0">Stage au laboratoire CERTES</h5>
+                                        </div>
+                                        <p class="mb-1"><i class="bi bi-calendar me-2"></i>Avril-Juin 2022</p>
+                                        <p class="mb-1"><i class="bi bi-gear me-2"></i>Outils/moyens : Veille documentaire, recherche, banc-d'essai</p>
+                                        <ul class="mt-3">
+                                            <li>Contribution à la mise en œuvre d'un émulateur éolien</li>
+                                            <li>Conception et montage d'un banc d'essai opérationnel</li>
+                                            <li>Analyse des données de performance</li>
+                                            <li>Rédaction de rapports techniques</li>
+                                        </ul>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Project Card 8-->
-                        <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
-                            <div class="card-body p-0">
-                                <div class="d-flex align-items-center">
-                                    <div class="p-5">
-                                        <center><h5 class="fw-bolder">Responsable logistique de l’IMT Atlantique Cartel des Mines 2023 à Alès</h5></center>
-                                        <p>&#x2014; Communication professionnelle: Contact avec les sociétés de transport,</p>
-                                        <p>&#x2014; Négociation et prise de décision optimale: Demande de devis et choix de l'offre la plus adaptée pour l'école,</p>
-                                        <p>&#x2014; Gestion logistique: Répartition des étudiants dans les bus et logements d'accueil,</p>
-                                        <p>&#x2014; Réussite du voyage et satisfaction des participants.</p>
-                                    </div>
+                                    <img class="img-fluid d-none d-lg-block" src="assets/eolien.jpg" alt="Émulateur éolien" style="width: 250px; height: 100%; object-fit: cover;">
                                 </div>
                             </div>
                         </div>
@@ -158,32 +374,46 @@
                 </div>
             </div>
         </section>
+
         <!-- Call to action section-->
         <section class="py-5 bg-gradient-primary-to-secondary text-white">
             <div class="container px-5 my-5">
                 <div class="text-center">
-                    <h6><i>Je suis convaincu que nous pouvons accomplir de grandes choses en travaillant ensemble.</i></h6>
-                    <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="contact.html">Contact me</a>
+                    <h2 class="fw-bolder mb-4">Intéressé par mon profil ?</h2>
+                    <p class="lead mb-4">Je suis toujours ouvert à de nouvelles opportunités et collaborations.</p>
+                    <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="mailto:moustapha.mbaye@imt-atlantique.net">
+                        <i class="bi bi-envelope me-2"></i>Me contacter
+                    </a>
                 </div>
             </div>
         </section>
     </main>
+
     <!-- Footer-->
     <footer class="bg-white py-4 mt-auto">
         <div class="container px-5">
             <div class="row align-items-center justify-content-between flex-column flex-sm-row">
                 <div class="col-auto">
-                    <div class="small m-0">Copyright &copy; Moustapha MBAYE 2023</div>
+                    <div class="small m-0">Copyright &copy; MBAYE Moustapha <span id="current-year"></span></div>
                 </div>
                 <div class="col-auto">
                     <a class="small" href="mailto:moustapha.mbaye@imt-atlantique.net">Contact</a>
+                    <span class="mx-1">&middot;</span>
+                    <a class="small" href="https://linkedin.com/in/votreprofil" target="_blank">LinkedIn</a>
                 </div>
             </div>
         </div>
     </footer>
+
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+    <!-- Animate On Scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Animation on Scroll
+        AOS.init({ duration: 900, once: true, offset: 60 });
+        // Ajoute l'année courante dans le footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
