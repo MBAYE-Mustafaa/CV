@@ -19,7 +19,144 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Custom Styles -->
     <link href="css/styles.css" rel="stylesheet">
+    <!-- ...existing code... -->
+
+    <!-- ...existing code... -->
+    <link href="css/styles.css" rel="stylesheet">
+    <style>
+        /* Modernisation du design */
+        body {
+            font-family: 'Plus Jakarta Sans', 'Poppins', Arial, sans-serif;
+            background: linear-gradient(120deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .navbar {
+            border-radius: 1.5rem;
+            margin-top: 1rem;
+            background: rgba(255,255,255,0.95);
+            box-shadow: 0 4px 24px rgba(30,60,114,0.07);
+            transition: box-shadow 0.3s;
+        }
+        .navbar.scrolled {
+            box-shadow: 0 8px 32px rgba(30,60,114,0.13);
+            background: rgba(255,255,255,0.98);
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-gradient-primary-to-secondary {
+            background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%) !important;
+        }
+          .profile {
+            border-radius: 50%;
+            width: 260px;
+            height: 260px;
+            border: 6px solid white;
+            box-shadow: 0 15px 30px rgba(26, 58, 143, 0.2);
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: floating 10s ease-in-out infinite;
+        }
+        
+        .profile-img {
+            width: 96%;
+            height: 96%;
+            object-fit: cover;
+            border-radius: 100%;
+            border: 2px solid white;
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0%, 100% { transform: translateY(0);}
+            50% { transform: translateY(-16px);}
+        }
+        .skills-section .card {
+            border-radius: 1.25rem;
+            background: #f8fafc;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .skills-section .card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(30,60,114,0.10);
+        }
+        .about-section {
+            background: #fff;
+            border-radius: 2rem;
+            box-shadow: 0 8px 32px rgba(30,60,114,0.07);
+        }
+        .parcoursimage img {
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px rgba(30,60,114,0.13);
+            border: 3px solid #e3eafc;
+        }
+        .social-icons a {
+            color: #2a5298 !important;
+            background: #fff;
+            border-radius: 50%;
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(30,60,114,0.07);
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+            font-size: 2rem;
+        }
+        .social-icons a:hover {
+            background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+            color: #fff !important;
+            transform: scale(1.12) rotate(-6deg);
+        }
+        .btn-primary, .btn-outline-dark, .btn-outline-light {
+            border-radius: 2rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            box-shadow: 0 2px 8px rgba(30,60,114,0.07);
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        }
+        .btn-primary:hover, .btn-outline-dark:hover, .btn-outline-light:hover {
+            box-shadow: 0 6px 24px rgba(30,60,114,0.13);
+        }
+        .badge.bg-gradient-primary-to-secondary {
+            font-size: 1.1rem;
+            padding: 0.7em 1.5em;
+            border-radius: 1.5rem;
+            letter-spacing: 0.04em;
+            background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%) !important;
+        }
+        .footer {
+            background: #fff;
+            border-radius: 1.5rem 1.5rem 0 0;
+            box-shadow: 0 -4px 24px rgba(30,60,114,0.07);
+        }
+        @media (max-width: 991px) {
+            .profile {
+                width: 180px;
+                height: 180px;
+            }
+            .about-section {
+                border-radius: 1rem;
+            }
+        }
+        @media (max-width: 575px) {
+            .navbar {
+                border-radius: 0;
+                margin-top: 0;
+            }
+            .about-section {
+                box-shadow: none;
+            }
+        }
+    </style>
 </head>
+
 <body class="d-flex flex-column h-100">
 
     <!-- HEADER MODERNE ET HARMONISÉ -->
@@ -90,7 +227,8 @@
                                 <span class="text-gradient d-inline">À propos de moi</span>
                             </h2>
                             <p class="lead fw-light mb-4">
-                                Je m'appelle Moustapha MBAYE. Né le 29/05/2000 au Sénégal, je suis doté d'excellentes capacités à mener plusieurs tâches de front tout en faisant preuve d'une grande résistance au stress. Passionné par l'innovation et les solutions durables, je me spécialise dans la transition énergétique et environnementale pour contribuer à un avenir plus vert.
+                                Je m'appelle <strong>Moustapha MBAYE</strong>.
+                                 Né le 29/05/2000 au Sénégal, je suis doté d'excellentes capacités à mener plusieurs tâches de front tout en faisant preuve d'une grande résistance au stress. Passionné par l'innovation et les solutions durables, je me suis spécialisé dans la transition énergétique et environnementale pour contribuer à un avenir plus vert.
                             </p>
                             <!-- Compétences -->
                             <div class="skills-section my-5">
